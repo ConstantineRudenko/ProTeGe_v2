@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12323, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: ProTeGe UI colors
+  m_EditorClassIdentifier: 
+  m_Presets:
+  - m_Name: bluish dark
+    m_Color: {r: 0.185148, g: 0.19922547, b: 0.222, a: 1}
+  - m_Name: accent grey
+    m_Color: {r: 0.266, g: 0.266, b: 0.266, a: 1}
+  - m_Name: accent green
+    m_Color: {r: 0.24378093, g: 0.362, b: 0.23955882, a: 1}
+  - m_Name: accent blue
+    m_Color: {r: 0.27249134, g: 0.30803004, b: 0.41176468, a: 1}
+  - m_Name: background lighter
+    m_Color: {r: 0.397, g: 0.397, b: 0.397, a: 1}
+  - m_Name: background light
+    m_Color: {r: 0.18431373, g: 0.18431373, b: 0.18431373, a: 1}
+  - m_Name: background
+    m_Color: {r: 0.10980392, g: 0.10980392, b: 0.10980392, a: 1}
+  - m_Name: button dark
+    m_Color: {r: 0.05882353, g: 0.05882353, b: 0.05882353, a: 1}
+  - m_Name: button highlight
+    m_Color: {r: 0.15573333, g: 0.15573333, b: 0.26666668, a: 1}
+  - m_Name: node
+    m_Color: {r: 0.09803922, g: 0.09803922, b: 0.09803922, a: 1}
+  - m_Name: almost white
+    m_Color: {r: 0.95294124, g: 0.95294124, b: 0.95294124, a: 1}
+  - m_Name: red
+    m_Color: {r: 0.5568628, g: 0.14901961, b: 0.14901961, a: 1}
+  - m_Name: yellow
+    m_Color: {r: 0.9607844, g: 0.9176471, b: 0.2392157, a: 1}
