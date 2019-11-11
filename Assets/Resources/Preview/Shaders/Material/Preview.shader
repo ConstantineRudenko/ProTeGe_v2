@@ -148,7 +148,7 @@
 
 			o.Occlusion = tex2D(_OcclusionTex, IN.uv_OcclusionTex).r;
 			o.Metallic = tex2D(_MetallicTex, IN.uv_MetallicTex).r;
-			o.Emission.rgb = tex2D(_EmissionTex, IN.uv_EmissionTex).r;
+			o.Emission.rgb = tex2D(_EmissionTex, IN.uv_EmissionTex).rgb;
 		} 
 		ENDCG
 	}
