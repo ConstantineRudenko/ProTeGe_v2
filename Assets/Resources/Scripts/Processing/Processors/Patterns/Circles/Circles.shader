@@ -56,10 +56,10 @@ Shader "ProTeGe/Processors/Pattern/Circles"
 				float freq = _Frequency;
 				freq = int(freq*20)+1;
 
-				_Flatness *= 0.999;
+				_Thickness = 1.0 - saturate(_Thickness);
+				_Flatness = 1.0 - saturate(_Flatness * 0.999);
 
 				float dist = length(float2(0.5,0.5)-i.uv.xy);
-				//dist = i.uv.x; lines
 				dist += _Noise * col.x * 0.5;
 
 				float start = int(dist * freq);
@@ -70,9 +70,9 @@ Shader "ProTeGe/Processors/Pattern/Circles"
 				dist = abs(dist - mid) / (end - start) * 2;
 
 				float r = dist;
-				r = saturate(r / _Thickness);
-
-				r = saturate(r - _Flatness) / (1.0 - _Flatness);
+				
+				r = saturate(r - _Thickness) / (1.0 - _Thickness);
+				r = saturate(r / _Flatness);
 
 				return float4(r,r,r,1);
 			}

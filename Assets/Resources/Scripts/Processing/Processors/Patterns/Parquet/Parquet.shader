@@ -99,13 +99,8 @@ Shader "ProTeGe/Processors/Pattern/Parquet"
 				float r2 = dist;
 
 				r = min(r,r2);
-
 				r = saturate((r - _Thickness) / (1.0 - _Thickness));
-
 				r = saturate(r / (1.0 - _Flatness));
-
-
-
 
 				return float4(r,r,r,1);
 

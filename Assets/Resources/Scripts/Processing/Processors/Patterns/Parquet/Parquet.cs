@@ -13,8 +13,8 @@ namespace ProTeGe{
 
 				public ProcessorParquet () {
 					m = new Material(Shader.Find("ProTeGe/Processors/Pattern/Parquet"));
-					AddProperty (new ProcessorProperty_float("Length", 1.0f, 5.0f));
-					AddProperty (new ProcessorProperty_float("Size", 1.0f, 5.0f));
+					AddProperty (new ProcessorProperty_float("Length", 0.0f, 3.0f));
+					AddProperty (new ProcessorProperty_float("Size", 0.0f, 1.0f));
 					AddProperty (new ProcessorProperty_fixed("Thickness", 0.8f));
 					AddProperty (new ProcessorProperty_fixed("Flatness", 1.0f));
 				}

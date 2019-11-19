@@ -58,7 +58,8 @@ Shader "ProTeGe/Processors/Pattern/Lines"
 
 				freq = int(freq*20)+1;
 
-				_Flatness *= 0.999;
+				_Thickness = 1.0 - saturate(_Thickness);
+				_Flatness = 1.0 - saturate(_Flatness * 0.999);
 
 				float dist = _Horizontal ? i.uv.y : i.uv.x; 
 				dist += _Noise * col.x * 0.5;
@@ -71,9 +72,9 @@ Shader "ProTeGe/Processors/Pattern/Lines"
 				dist = abs(dist - mid) / (end - start) * 2;
 
 				float r = dist;
-				r = saturate(r / _Thickness);
 
-				r = saturate(r - _Flatness) / (1.0 - _Flatness);
+				r = saturate(r - _Thickness) / (1.0 - _Thickness);
+				r = saturate(r / _Flatness);
 
 				return float4(r,r,r,1);
 			}

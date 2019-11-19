@@ -15,7 +15,7 @@ namespace ProTeGe{
 					m = new Material(Shader.Find("ProTeGe/Processors/Pattern/Lines" ));
 					AddProperty (new ProcessorProperty_float("Noise", 1, 2));
 					AddProperty (new ProcessorProperty_float("Frequency", 0.2f, 1));
-					AddProperty (new ProcessorProperty_fixed("Thickness", 0.1f));
+					AddProperty (new ProcessorProperty_fixed("Thickness", 1));
 					AddProperty (new ProcessorProperty_fixed("Flatness", 0));
 					AddProperty (new ProcessorProperty_bool ("Horizontal"));
 				}
@@ -23,7 +23,7 @@ namespace ProTeGe{
 				protected override RenderTexture GenerateRenderTexture(int resolution){
 					m.SetFloat ("_Noise", this ["Noise"]);
 					m.SetFloat ("_Frequency", this ["Frequency"]);
-					m.SetFloat ("_Thickness", 1.0f - this ["Thickness"]);
+					m.SetFloat ("_Thickness", this ["Thickness"]);
 					m.SetFloat ("_Flatness", this ["Flatness"]);
 					m.SetInt ("_Horizontal", this ["Horizontal"] == 0 ? 0 : 1);
 					ProTeGe_Texture t = inputs [0].Generate (resolution);
