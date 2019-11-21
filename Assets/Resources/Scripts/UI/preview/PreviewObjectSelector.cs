@@ -30,11 +30,11 @@ public class PreviewObjectSelector : MonoBehaviour {
 		mr.material = m;
 
 		if (target == cube)
-			SetTextureScale (mr.material, new Vector2 (1, 1));
-		else if (target == cylinder)
 			SetTextureScale (mr.material, new Vector2 (2, 2));
+		else if (target == cylinder)
+			SetTextureScale (mr.material, new Vector2 (3, 3));
 		else if (target == sphere)
-			SetTextureScale (mr.material, new Vector2 (4, 4));
+			SetTextureScale (mr.material, new Vector2 (6, 6));
 
 		buttonText.text = target.name;
 	}
