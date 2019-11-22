@@ -1,4 +1,4 @@
-# ProTeGe_v2
+# ProTeGe v2
 
 ToDo:
 new readme, screenshots
