@@ -13,8 +13,8 @@ Graph-based procedural texture generator.
 ### ToDo:
 new readme, screenshots
 
-### Demo video:
-[![Video preview](https://i.imgur.com/r5CQdc6.png)](https://youtu.be/QU9ibimIrM4)
+### Demo video (click):
+[![Video preview](https://img.youtube.com/vi/QU9ibimIrM4/0.jpg)](https://youtu.be/QU9ibimIrM4)
 
 ### Unity version:
 * **2018.1.9f2**
