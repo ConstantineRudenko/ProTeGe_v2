@@ -68,8 +68,8 @@
 
 			//begin parallax
 
-			const int ParallaxSamples = 6;
-			const int ParallaxSecondarySamples = 6;
+			const int ParallaxSamples = 36;
+			const int ParallaxSecondarySamples = 0;
 			const float parallax_distance = 0.2;
 
 			float2 p = normalize(IN.viewDir).xy;
@@ -80,9 +80,7 @@
 			float2 dp = p / ParallaxSamples;
 			float h = 1;
 			float dh = h / ParallaxSamples;
-
-			float prev_h = 1;
-			float prev_this_h = 1;
+			float prev_this_h = h;
 
 			for (int i = 0; i < ParallaxSamples; i++)
 			{
@@ -91,41 +89,16 @@
 				if (this_h >= h) {
 					h += dh;
 					p += dp;
-					prev_h = 1;
-					prev_this_h = 1;
-					dh /= ParallaxSecondarySamples;
-					dp /= ParallaxSecondarySamples;
-
-					for (int k = 0; k < ParallaxSecondarySamples; k++)
-					{
-						this_h = tex2D(_ParallaxTex, IN.uv_ParallaxTex + p).r;
-
-						if (this_h >= h) {
-							float delta1 = this_h - h;
-							float delta2 = prev_h - prev_this_h;
-							float ratio = delta1 / (delta1 + delta2);
-							p += ratio * dp;
-							break;
-						}
-						else
-						{
-							prev_h = h;
-							prev_this_h = this_h;
-							h -= dh;
-							p -= dp;
-						}
-					}
-					break;
 
 					float delta1 = this_h - h;
-					float delta2 = prev_h - prev_this_h;
+					float delta2 = h + dh - prev_this_h;
 					float ratio = delta1 / (delta1 + delta2);
 					p += ratio * dp;
+
 					break;
 				}
 				else
 				{
-					prev_h = h;
 					prev_this_h = this_h;
 					h -= dh;
 					p -= dp;
