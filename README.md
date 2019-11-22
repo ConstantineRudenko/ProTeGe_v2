@@ -1,6 +1,16 @@
 # ProTeGe v2
 
-ToDo:
+Graph-based procedural texture generator.
+
+### Features:
+* Various noises, patterns, blending modes, filters, etc.
+* Generate a full set of textures from a single graph (albedo, normals, smoothness, metallicity, AO, parallax, emission).
+* Save / Load graph (save file uses json format).
+* Smart texture caching - nodes are updated only when their input was changed.
+* Multiple resolutions for preview and export (512, 1024, 2048, 4096, 8192)
+* Always use best quality for export (gaussian blur, etc.)
+
+### ToDo:
 new readme, screenshots
 
 ### Demo video:
