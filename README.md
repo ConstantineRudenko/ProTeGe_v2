@@ -11,10 +11,7 @@ Graph-based procedural texture generator.
 * Always use best quality for export (gaussian blur, etc.)
 
 ### ToDo:
-new readme, screenshots
-
-### Demo video (click):
-[![Video preview](https://img.youtube.com/vi/QU9ibimIrM4/0.jpg)](https://youtu.be/QU9ibimIrM4)
+Doxygen, demo video
 
 ### Unity version:
 * **2018.1.9f2**
