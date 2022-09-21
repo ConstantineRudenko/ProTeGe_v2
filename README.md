@@ -15,4 +15,4 @@ Doxygen, demo video
 
 ### Unity version
 
-**2019.4.40f1** (LTS)
+**2021.3.10f1** (LTS)
