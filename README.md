@@ -19,5 +19,5 @@ Doxygen, demo video
 
 ## Credit
 
-Developed in collaboration with Ihor Los ([VectorElk](https://github.com/VectorElk))
-
+* Developed in collaboration with Ihor Los ([VectorElk](https://github.com/VectorElk))
+* Uses SMAA implementation by Thomas Hourdel ([Chman](https://github.com/Chman)) [[zLib](https://github.com/KosRud/ProTeGe_v2/blob/master/Assets/SMAA-master/LICENSE.txt)]
