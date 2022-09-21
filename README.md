@@ -2,7 +2,7 @@
 
 Graph-based procedural texture generator.
 
-### Features:
+### Features
 * Various noises, patterns, blending modes, filters, etc.
 * Generate a full set of textures from a single graph (albedo, normals, smoothness, metallicity, AO, parallax, emission).
 * Save / Load graph (save file uses json format).
@@ -10,8 +10,9 @@ Graph-based procedural texture generator.
 * Multiple resolutions for preview and export (512, 1024, 2048, 4096, 8192)
 * Always use best quality for export (gaussian blur, etc.)
 
-### ToDo:
+### ToDo
 Doxygen, demo video
 
-### Unity version:
-* **2018.1.9f2**
+### Unity version
+
+**2019.4.40f1** (LTS)
