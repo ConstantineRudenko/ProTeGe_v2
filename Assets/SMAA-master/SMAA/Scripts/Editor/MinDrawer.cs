@@ -21,18 +21,25 @@
  *    distribution.
  */
 
+ /*
+  * Alteration:
+  *
+  * "MinAttribute" replaced with "Smaa.MinAttribute"
+  * due to ambiguity with UnityEngine.MinAttribute
+  */
+
 using UnityEngine;
 using UnityEditor;
 using Smaa;
 
 namespace SmaaEditor
 {
-	[CustomPropertyDrawer(typeof(MinAttribute))]
+	[CustomPropertyDrawer(typeof(Smaa.MinAttribute))]
 	internal sealed class MinDrawer : PropertyDrawer
 	{
 		public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
 		{
-			MinAttribute attribute = (MinAttribute)base.attribute;
+			Smaa.MinAttribute attribute = (Smaa.MinAttribute)base.attribute;
 
 			if (property.propertyType == SerializedPropertyType.Integer)
 			{

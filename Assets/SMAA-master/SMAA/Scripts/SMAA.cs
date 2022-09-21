@@ -21,6 +21,13 @@
  *    distribution.
  */
 
+ /*
+  *	Alteration:
+  *
+  *	Removed the check "SystemInfo.supportsImageEffects"
+  * (obsolete since Unity 2019)
+  */
+
 using UnityEngine;
 using System;
 
@@ -148,13 +155,6 @@ namespace Smaa
 
 		void Start()
 		{
-			// Disable if we don't support image effects
-			if (!SystemInfo.supportsImageEffects)
-			{
-				enabled = false;
-				return;
-			}
-
 			// Disable the image effect if the shader can't run on the user's graphics card
 			if (!Shader || !Shader.isSupported)
 				enabled = false;
